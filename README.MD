@@ -16,6 +16,8 @@ For the project structure, I've used the standard project layout. The project is
 - internal/pkg - packages for shared code between applications 
 - testdata - contains sample data
 
+The database schema is designed to store the normalized and aggregated data. I saved schemas as table migration files in the `internal/pkg/database/migrations` directory.
+
 The program is a CLI application with four commands:
 - migrate -  to create the tables in ClickHouse
 - aggregate -  to read the data from a CSV file or URL, normalize it, and store it in ClickHouse.
